@@ -7,20 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
   </head>
-  <body>
-    <p>Welcome to the chatapp</p>
+  <body class="chat">
+    <div class="chat__sidebar">
+      <h3>squiblers</h3>
+      <div id="users"></div>
+    </div>
+    <div class="chat__main">
+      <ol id="messages" class="chat__messages">
 
-    <ol id="messages">
+      </ol>
+      <div class="chat__footer">
+        <form id="message-form">
+          <input type="text" name="message" placeholder="Message" autofocus autocomplete="off"/>
+          <button type="submit" class="">Send</button>
+        </form>
 
-    </ol>
-    <form id="message-form">
-      <input type="text" name="message" placeholder="Message"/>
-      <button type="submit" class="btn btn-primary">Send</button>
-    </form>
+        <button id="send-location" class="">Send Location</button>
+      </div>
+    </div>
 
-    <button id="send-location" class="btn btn-info">Send Location</button>
 
     <!-- Optional JavaScript -->
     <script type="text/javascript" src="/socket.io/socket.io.js"></script>
@@ -29,7 +36,6 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script type="text/javascript" src="/js/index.js"></script>
   </body>
 </html>
