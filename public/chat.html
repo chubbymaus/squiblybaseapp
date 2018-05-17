@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Squibly</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body class="chat">
+    <div class="chat__sidebar">
+      <h3>squiblers</h3>
+      <div id="users"></div>
+    </div>
+    <div class="chat__main">
+      <ol id="messages" class="chat__messages">
+
+      </ol>
+      <div class="chat__footer">
+        <form id="message-form">
+          <input type="text" name="message" placeholder="Message" autofocus autocomplete="off"/>
+          <button type="submit" class="">Send</button>
+        </form>
+
+        <button id="send-location" class="">Send Location</button>
+      </div>
+    </div>
+
+
+
+    <script id="message-template" type="text/template">
+      <li class="message">
+        <div class="message__title">
+          <h4>{{from}}</h4>
+          <span>{{createdAt}}</span>
+        </div>
+        <div class="message__body">
+            <p>{{text}}</p>
+        </div>
+      </li>
+    </script>
+
+    <script id="location-message-template" type="text/template">
+      <li class="message">
+        <div class="message__title">
+          <h4>{{from}}</h4>
+          <span>{{createdAt}}</span>
+        </div>
+        <div class="message__body">
+            <p>
+                <a href="{{url}}" target="_blank">My Current Location</a>
+            </p>
+        </div>
+      </li>
+    </script>
+    <!-- Optional JavaScript -->
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/libs/moment.js"></script>
+    <script type="text/javascript" src="/js/libs/mustache.js"></script>
+    <script type="text/javascript" src="/js/chat.js"></script>
+  </body>
+</html>
